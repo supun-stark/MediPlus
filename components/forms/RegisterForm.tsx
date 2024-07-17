@@ -72,6 +72,8 @@ const RegisterForm= ({user}: {user: User}) => {
     } catch(error){
       console.log(error);
     }
+
+    setIsLoading(false);
   }
 
 
@@ -347,7 +349,7 @@ const RegisterForm= ({user}: {user: User}) => {
 
 
 
-      <SubmitButton isLoading={isLoading}>Get Started</SubmitButton>
+      <SubmitButton isLoading={isLoading}>Submit</SubmitButton>
     </form>
   </Form>
   )
