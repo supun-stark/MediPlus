@@ -1,13 +1,18 @@
 import PatientForm from "@/components/forms/PatientForm";
-import { Button } from "@/components/ui/button";
+import PasskeyModel from "@/components/PasskeyModel";
 import Image from "next/image";
 import Link from "next/link";
 
-export default function Home() {
+
+export default function Home({searchParams}: SearchParamProps) {
+
+  const isAdmin = searchParams.admin === 'true';
+
   return (
     <div className="flex h-screen max-h-screen">
 
-      {/* TODO: OTP verification */}
+     {isAdmin && <PasskeyModel/>}
+
       <div className="pic-section my-4 px-10 max-w-[50%] py-5">
       <Image
         src="/assets/images/doctor-lady.jpg"
