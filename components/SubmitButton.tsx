@@ -19,6 +19,10 @@ const SubmitButton = ({isLoading, className, children}: ButtonProps) => {
                      width={24}
                      alt="loader"
                     className="animate-spin"
+                    onError={(e) => {
+                      // Fallback to a default image or handle the error
+                      (e.target as HTMLImageElement).src = '/assets/icons/default-loader.svg';
+                    }}
                  />
                  Loading...
             </div>

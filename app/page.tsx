@@ -4,9 +4,10 @@ import Image from "next/image";
 import Link from "next/link";
 
 
-export default function Home({searchParams}: SearchParamProps) {
+const Home = ({searchParams}: SearchParamProps) => {
 
-  const isAdmin = searchParams.admin === 'true';
+  //const isAdmin = searchParams.admin === 'true';
+  const isAdmin = searchParams?.admin === "true";
 
   return (
     <div className="flex h-screen max-h-screen">
@@ -14,14 +15,14 @@ export default function Home({searchParams}: SearchParamProps) {
      {isAdmin && <PasskeyModel/>}
 
       <div className="pic-section my-4 px-10 max-w-[50%] py-5">
-      <Image
-        src="/assets/images/doctor-lady.jpg"
-        height={1000}
-        width={1000}
-        alt="patient"
-        className="side-img opacity-77 object-center"
-        priority
-      />
+        <Image
+          src="/assets/images/doctor-lady.jpg"
+          height={1000}
+          width={1000}
+          alt="patient"
+          className="side-img opacity-77 object-center"
+          priority
+        />
       </div>
 
       <section className="container remove-scrollbar my-auto m-4">
@@ -44,6 +45,7 @@ export default function Home({searchParams}: SearchParamProps) {
           <div className="text-14-regular flex mt-10 flex-row items-center justify-center">
           {/* <p className="justify-items-end text-dark-600 xl:text-left">© 2024 MediPlus</p> */}
           <Link href="/?admin=true" className="text-green-500">Admin</Link>
+          
           </div>
 
           <div className="copy-right mt-6 text-12-regular flex flex-row items-center justify-center">
@@ -57,3 +59,5 @@ export default function Home({searchParams}: SearchParamProps) {
     </div>
   );
 }
+
+export default Home

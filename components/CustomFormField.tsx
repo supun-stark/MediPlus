@@ -10,7 +10,7 @@ import {
   } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
 import { Control, Field } from "react-hook-form"
-import { FormFieldType } from "./forms/PatientForm"
+//import { FormFieldType } from "./forms/PatientForm"
 import Image from "next/image"
 import 'react-phone-number-input/style.css'
 import PhoneInput from 'react-phone-number-input'
@@ -20,6 +20,17 @@ import "react-datepicker/dist/react-datepicker.css";
 import { Select, SelectContent, SelectTrigger, SelectValue } from "./ui/select"
 import { Textarea } from "./ui/textarea"
 import { Checkbox } from "./ui/checkbox"
+import ReactDatePicker from "react-datepicker";
+
+export enum FormFieldType {
+    INPUT = "input",
+    TEXTAREA = "textarea",
+    PHONE_INPUT = "phoneInput",
+    CHECKBOX = "checkbox",
+    DATE_PICKER = "datePicker",
+    SELECT = "select",
+    SKELETON = "skeleton",
+  }
 
 interface CustomProps{
     control: Control<any>,
@@ -40,6 +51,7 @@ const RenderField  = ({field, props}: {field: any; props: CustomProps}) =>{
     const {fieldType, iconSrc, iconAlt, placeholder, showTimeSelect, dateFormat, renderSkeleton} = props;
 
     switch (fieldType) {
+    // switch (props.fieldType) {    
         case FormFieldType.INPUT:
             return(
                 <div className="flex rounded-md border border-dark-500 bg-dark-400">
@@ -101,12 +113,20 @@ const RenderField  = ({field, props}: {field: any; props: CustomProps}) =>{
                         className="ml-2"
                     />
                     <FormControl>
-                        <DatePicker selected={field.value} 
+                        <ReactDatePicker selected={field.value} 
                         onChange={(date) => field.onChange(date)}
                         dateFormat={dateFormat ?? 'MM/dd/yyyy'} 
                         showTimeSelect={showTimeSelect ?? false}
                         timeInputLabel="Time:"
                         wrapperClassName="date-picker"/>
+                        {/* <ReactDatePicker
+                            showTimeSelect={props.showTimeSelect ?? false}
+                            selected={field.value}
+                            onChange={(date: Date) => field.onChange(date)}
+                            timeInputLabel="Time:"
+                            dateFormat={props.dateFormat ?? "MM/dd/yyyy"}
+                            wrapperClassName="date-picker"
+                            /> */}
                     </FormControl>
                 </div>
             )

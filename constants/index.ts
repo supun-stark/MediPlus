@@ -74,8 +74,16 @@ export const Doctors = [
     name: "Angelina Cruz",
   },
   {
+    image: "/assets/images/dr-cameron.png",
+    name: "Jannie Stephani",
+  },
+  {
     image: "/assets/images/dr-sharma.png",
     name: "Kishen Sharma",
+  },
+  {
+    image: "/assets/images/dr-green.png",
+    name: "Ricky Henry",
   },
 ];
 

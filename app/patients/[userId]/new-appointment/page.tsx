@@ -31,6 +31,11 @@ export default async function NewAppointment({params: {userId}}: SearchParamProp
             patientId={patient.$id}
            />
 
+          <div className="text-14-regular flex mt-8 flex-row items-center justify-center">
+          {/* <p className="justify-items-end text-dark-600 xl:text-left">© 2024 MediPlus</p> */}
+            <Link href="/" className="text-red-500">Logout</Link>
+          </div>
+
           <div className="copy-right mt-8 text-12-regular flex flex-row items-center justify-center">
             <p className=" text-dark-600 xl:text-left">All Rights Reserved © 2024 MediPlus</p>
           </div>

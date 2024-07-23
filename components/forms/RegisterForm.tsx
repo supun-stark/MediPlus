@@ -349,7 +349,7 @@ const RegisterForm= ({user}: {user: User}) => {
 
 
 
-      <SubmitButton isLoading={isLoading}>Submit</SubmitButton>
+      <SubmitButton isLoading={isLoading}>Request</SubmitButton>
     </form>
   </Form>
   )
