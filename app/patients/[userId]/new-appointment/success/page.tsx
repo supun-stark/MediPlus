@@ -76,7 +76,7 @@ const Success = async ({params: {userId}, searchParams }: SearchParamProps) => {
             </Button>
 
             <div className="copy-right mt-8 text-12-regular flex flex-row items-center justify-center">
-              <p className=" text-dark-600 xl:text-left">All Rights Reserved © 2024 MediPlus</p>
+              <p className=" text-dark-600 xl:text-left">All Rights Reserved © SupunThewahettige | 2024</p>
             </div>
         </div>
        

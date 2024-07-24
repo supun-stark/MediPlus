@@ -12,17 +12,16 @@ export default async function NewAppointment({params: {userId}}: SearchParamProp
       <section className="container remove-scrollbar my-auto">
         <div className="sub-container max-w-[860px] flex-1 justify-between">
           <div className="logo-section flex flex-row gap-1">
-          <Image
-          src="/assets/icons/logo-icon.svg"
-          height={1000}
-          width={1000}
-          alt="patient"
-          className="mb-11 h-10 w-fit float-left"
-          />
-          <div className="title float-right w-[200px] h-10">
-            <h1 className="text-3xl">Medi Plus</h1>
-          </div>
-
+            <Image
+            src="/assets/icons/logo-icon.svg"
+            height={1000}
+            width={1000}
+            alt="patient"
+            className="mb-11 h-10 w-fit float-left"
+            />
+            <div className="title float-right w-[200px] h-10">
+              <h1 className="text-3xl">Medi Plus</h1>
+            </div>
           </div>
        
           <AppointmentForm
@@ -37,7 +36,7 @@ export default async function NewAppointment({params: {userId}}: SearchParamProp
           </div>
 
           <div className="copy-right mt-8 text-12-regular flex flex-row items-center justify-center">
-            <p className=" text-dark-600 xl:text-left">All Rights Reserved © 2024 MediPlus</p>
+            <p className=" text-dark-600 xl:text-left">All Rights Reserved © SupunThewahettige | 2024</p>
           </div>
 
         </div>

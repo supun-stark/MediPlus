@@ -43,7 +43,7 @@ const Register = async({params: {userId} }: SearchParamProps) => {
 
 
             <div className="copy-right mt-10 text-12-regular flex flex-row items-center justify-center">
-              <p className=" text-dark-600 xl:text-left">All Rights Reserved © 2024 MediPlus</p>
+              <p className=" text-dark-600 xl:text-left">All Rights Reserved © SupunThewahettige | 2024</p>
             </div>
 
          </div>

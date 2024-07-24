@@ -7,10 +7,9 @@ import Link from 'next/link'
 import React from 'react'
 
 
-
 const Admin = async () => {
 
-    const appointments = await getRecentAppointmentList()
+  const appointments = await getRecentAppointmentList()
 
   return (
     <div className='mx-auto flex max-w-7xl flex-col space-y-14'>
@@ -37,7 +36,7 @@ const Admin = async () => {
         {/* Main section */}
         <main className='admin-main'>
             <section className='w-full space-y-4'>
-                <h1 className='header'>Welcome back!</h1>
+                <h1 className='header !text-[#4D2DB7]'>Welcome, Admin!</h1>
                 <p className='text-dark-700'>Get Ahead by Managing Today's Appointments!</p>
             </section>
 
@@ -69,16 +68,13 @@ const Admin = async () => {
            <DataTable columns={columns} data={appointments.documents}/> 
           
         </main>
-        <div className="text-15-regular flex flex-row items-center justify-end !mr-[140px] !mt-3">
-          {/* <p className="justify-items-end text-dark-600 xl:text-left">© 2024 MediPlus</p> */}
+          <div className="text-15-regular flex flex-row items-center justify-end !mr-[140px] !mt-3">
             <Link href="/" className="text-red-500">Logout</Link>
           </div>
 
           <div className="copy-right mt-8 text-12-regular flex flex-row items-center justify-center">
-            <p className=" text-dark-600 xl:text-left">All Rights Reserved © 2024 MediPlus</p>
+            <p className=" text-dark-600 xl:text-left">All Rights Reserved © SupunThewahettige | 2024</p>
           </div>
-
-
     </div>
   )
 }

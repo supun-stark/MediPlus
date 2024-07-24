@@ -3,7 +3,6 @@
 import { ID, Query } from "node-appwrite"
 import {BUCKET_ID, DATABASE_ID, databases, ENDPOINT, PATIENT_COLLECTION_ID, PROJECT_ID, storage, users} from "../appwrite.config"
 import { parseStringify } from "../utils"
-
 import {InputFile} from "node-appwrite/file";
 
 export const createUser = async (user: CreateUserParams) => {
